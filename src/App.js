@@ -1,9 +1,14 @@
 import Header from "./Header";
+import Button from "./Button";
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
+      <Button outline>Button without .text</Button>
+      <Button>Button with .children</Button>
+      <Button text="New Button" />
+
       <div className="content">
         <div className="container">
           <div className="content__top">
