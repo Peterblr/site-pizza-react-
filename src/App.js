@@ -1,13 +1,18 @@
 import Header from "./Header";
-import Button from "./Button";
+// import Button from "./Button";
 
 function App() {
+  // const clickButton = () => {
+  //   alert("Alert!");
+  // };
+
   return (
     <div className="wrapper">
       <Header />
-      <Button outline>Button without .text</Button>
+      {/* <Button outline>Button without .text</Button>
       <Button>Button with .children</Button>
-      <Button texttt />
+      <Button onClick={clickButton}>Alert!</Button>
+      <Button onClick={() => alert("Push")}>Push!</Button> */}
 
       <div className="content">
         <div className="container">
