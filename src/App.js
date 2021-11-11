@@ -7,7 +7,7 @@ function App() {
       <Header />
       <Button outline>Button without .text</Button>
       <Button>Button with .children</Button>
-      <Button text="New Button" />
+      <Button texttt />
 
       <div className="content">
         <div className="container">
