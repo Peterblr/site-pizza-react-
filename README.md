@@ -21,6 +21,9 @@ Install scss/sass components for this project.
 Read more.\
 [Read more](https://www.google.com/search?q=Error%3A+%27node-sass%27+version+6.0.0+is+incompatible+with+%5E5&biw=1536&bih=754&ei=p72MYbGaE6frrgTexKL4CA&oq=Error%3A+%27node-sass%27+version+6.0.0+is+incompatible+with+%5E5&gs_lcp=Cgdnd3Mtd2l6EAMyCAghEBYQHRAeSgQIQRgBULAGWLYSYNAXaAFwAHgAgAF_iAHoA5IBAzAuNJgBAKABAcABAQ&sclient=gws-wiz&ved=0ahUKEwjxiYnH3I_0AhWntYsKHV6iCI84ChDh1QMIDg&uact=5)
 
+### `npm add classnames`
+
+Install components classNames.
 
 ### `npm run build`
 
