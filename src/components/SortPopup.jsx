@@ -2,13 +2,30 @@ import React from "react";
 
 function SortPopup() {
   const [visiblePopup, setVisiblePopup] = React.useState(false);
+  const sortRef = React.useRef();
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(!visiblePopup);
   };
 
+  const handleOutsideClick = (e) => {
+    if (!e.path.includes(sortRef.current)) {
+      setVisiblePopup(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.body.addEventListener("click", handleOutsideClick);
+  }, []);
+
   return (
-    <div className="sort">
+    <div
+      //   ref={(ref) => {
+      //     sortRef.current = ref;
+      //   }}
+      ref={sortRef}
+      className="sort"
+    >
       <div className="sort__label">
         <svg
           width="10"
