@@ -1,25 +1,16 @@
 import React from "react";
+import { Route } from "react-router-dom";
 
 import { Header } from "./components";
-import Home from "./pages/Home";
-
-// import Button from "./Button";
+import { Cart, Home } from "./pages";
 
 function App() {
-  // const clickButton = () => {
-  //   alert("Alert!");
-  // };
-
   return (
     <div className="wrapper">
       <Header />
-      {/* <Button outline>Button without .text</Button>
-      <Button>Button with .children</Button>
-      <Button onClick={clickButton}>Alert!</Button>
-      <Button onClick={() => alert("Push")}>Push!</Button> */}
 
       <div className="content">
-        <Home />
+        <Route exact path="/" component={Home} />
       </div>
     </div>
   );
