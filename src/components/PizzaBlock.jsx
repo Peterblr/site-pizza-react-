@@ -1,10 +1,10 @@
 import React from "react";
 
-function PizzaBlpck({ obj }) {
+function PizzaBlpck({ name, imageUrl }) {
   return (
     <div className="pizza-block">
-      <img className="pizza-block__image" src={obj.imageUrl} alt="Pizza" />
-      <h4 className="pizza-block__title">{obj.name}</h4>
+      <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
+      <h4 className="pizza-block__title">{name}</h4>
       <div className="pizza-block__selector">
         <ul>
           <li className="active">тонкое</li>
