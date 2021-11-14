@@ -1,8 +1,9 @@
 import React from "react";
+import classNames from "classnames";
 
-function PizzaBlpck({ name, imageUrl, price }) {
+function PizzaBlpck({ name, imageUrl, price, types }) {
   const typeNames = ["тонкое", "традиционное"];
-  const [activeType, setActiveType] = React.useState(0);
+  const [activeType, setActiveType] = React.useState(types[0]);
 
   const onSelectType = (index) => {
     setActiveType(index);
@@ -16,8 +17,12 @@ function PizzaBlpck({ name, imageUrl, price }) {
         <ul>
           {typeNames.map((type, index) => (
             <li
+              key={type}
               onClick={() => onSelectType(index)}
-              className={activeType === index ? "active" : ""}
+              className={classNames({
+                active: activeType === index,
+                disabled: !types.includes(index),
+              })}
             >
               {type}
             </li>
