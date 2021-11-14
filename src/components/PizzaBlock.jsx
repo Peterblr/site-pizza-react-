@@ -1,6 +1,6 @@
 import React from "react";
 
-function PizzaBlpck({ name, imageUrl }) {
+function PizzaBlpck({ name, imageUrl, price }) {
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
@@ -8,7 +8,7 @@ function PizzaBlpck({ name, imageUrl }) {
       <div className="pizza-block__selector">
         <ul>
           <li className="active">тонкое</li>
-          <li>традиционное</li>
+          <li className="disabled">традиционное</li>
         </ul>
         <ul>
           <li className="active">26 см.</li>
@@ -17,7 +17,7 @@ function PizzaBlpck({ name, imageUrl }) {
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от 395 ₽</div>
+        <div className="pizza-block__price">{price}</div>
         <div className="button button--outline button--add">
           <svg
             width="12"
