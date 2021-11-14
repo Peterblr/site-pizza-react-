@@ -1,14 +1,29 @@
 import React from "react";
 
 function PizzaBlpck({ name, imageUrl, price }) {
+  const typeNames = ["тонкое", "традиционное"];
+  const [activeType, setActiveType] = React.useState(0);
+
+  const onSelectType = (index) => {
+    setActiveType(index);
+  };
+
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{name}</h4>
       <div className="pizza-block__selector">
         <ul>
-          <li className="active">тонкое</li>
-          <li className="disabled">традиционное</li>
+          {typeNames.map((type, index) => (
+            <li
+              onClick={() => onSelectType(index)}
+              className={activeType === index ? "active" : ""}
+            >
+              {type}
+            </li>
+          ))}
+          {/* <li className="active">тонкое</li>
+          <li className="disabled">традиционное</li> */}
         </ul>
         <ul>
           <li className="active">26 см.</li>
